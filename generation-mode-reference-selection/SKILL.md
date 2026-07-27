@@ -1,17 +1,7 @@
 ---
 name: generation-mode-reference-selection
 description: |
-  当用户要决定用文生、图生或视频参考来做图片/视频，手上同时有文字、图片、动作视频或音频素材，或问“哪种参考最能控制动作、镜头、外观”时使用。先识别最难表达的变量，再把它分配给能直接承载它的输入模态与素材职责。不要用于从零细化静态图片提示词（见 2-1 试点技能），也不要用于只比较模型价格。 English signals: choose generation mode, reference modality, image vs video reference, control motion with reference.
-source_book: "《影视飓风 AI 实战课》 Tim"
-source_chapter: "1-1、1-2、5-1、5-2"
-tags: [generation-mode, multimodal-reference, control]
-related_skills:
-  - slug: capability-cost-fit
-    relation: composes-with
-  - slug: preserve-change-edit-contract
-    relation: composes-with
-  - slug: reference-anchor-density
-    relation: composes-with
+  当用户要决定用文生、图生或视频参考来做图片/视频，手上同时有文字、图片、动作视频或音频素材，或问“哪种参考最能控制动作、镜头、外观”时使用。先识别最难表达的变量，再把它分配给能直接承载它的输入模态与素材职责。不要用于从零细化静态图片提示词（见 2-1 试点技能），也不要用于只比较模型价格。 完整 5–30 秒视频项目请优先使用 build-ai-video-fast；单点任务仍使用本 Skill。 English signals: choose generation mode, reference modality, image vs video reference, control motion with reference.
 ---
 
 # 生成模式与参考职责匹配
@@ -86,8 +76,12 @@ related_skills:
 
 - composes-with: `capability-cost-fit`、`preserve-change-edit-contract`、`reference-anchor-density`
 
+
+
+- 项目总编排：若用户需要从创意或素材完成完整 5–30 秒视频制作包，优先使用 `build-ai-video-fast`。
+
 ## 审计信息
 
 - **验证通过**：V1 ✓ / V2 ✓ / V3 ✓
-- **测试通过率**：待阶段 4 盲测
+- **测试记录**：构建时 6/6 通过；详见 test-results.md
 - **蒸馏时间**：2026-07-27

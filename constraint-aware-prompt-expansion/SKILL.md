@@ -1,13 +1,7 @@
 ---
 name: constraint-aware-prompt-expansion
 description: |
-  当用户想让 AI 扩写图片提示词、在“严格符合要求”和“自由发散创意”之间取舍，或反馈“扩写得好看但关键要求丢了”时使用。先区分不可妥协约束与可探索空间，再选择控制模式或探索模式，并验收输出。不要用它代替从零明确视觉需求（用 image-prompt-specification），也不要把参考图反推当作可保证复刻（用 reference-image-prompt-reverse-engineering）。 English signals: expand my prompt, brainstorm image directions, constraint drift, creative exploration vs fidelity.
-source_book: "《影视飓风 AI 实战课｜2-1 图片提示词》 Tim"
-source_chapter: "00:12:10–00:14:36"
-tags: [prompt-expansion, ai-control, creative-exploration]
-related_skills:
-  - slug: image-prompt-specification
-    relation: depends-on
+  当用户想让 AI 扩写图片提示词、在“严格符合要求”和“自由发散创意”之间取舍，或反馈“扩写得好看但关键要求丢了”时使用。先区分不可妥协约束与可探索空间，再选择控制模式或探索模式，并验收输出。不要用它代替从零明确视觉需求（用 image-prompt-specification），也不要把参考图反推当作可保证复刻（用 reference-image-prompt-reverse-engineering）。 完整 5–30 秒视频项目请优先使用 build-ai-video-fast；单点任务仍使用本 Skill。 English signals: expand my prompt, brainstorm image directions, constraint drift, creative exploration vs fidelity.
 ---
 
 # AI 扩写的控制—探索决策
@@ -108,8 +102,12 @@ AI 扩写会放大提示词的丰富度，也会放大未写清的自由度。�
 
 - depends-on: `image-prompt-specification` — 先明确必须条件，才能判断扩写是否发生约束漂移。
 
+
+
+- 项目总编排：若用户需要从创意或素材完成完整 5–30 秒视频制作包，优先使用 `build-ai-video-fast`。
+
 ## 审计信息
 
 - **验证通过**：V1 ✓ / V2 ✓ / V3 ✓
-- **测试通过率**：待阶段 4 盲测
+- **测试记录**：构建时 6/6 通过；详见 test-results.md
 - **蒸馏时间**：2026-07-27

@@ -1,17 +1,7 @@
 ---
 name: endpoint-anchored-video-synthesis
 description: |
-  当用户明确知道视频开头、结尾、循环落点或关键状态，想让 AI 补中间过程、延长片段，或抱怨“结尾没停在我要的位置”时使用。先决定哪些时间端点必须锁定，再以首帧/尾帧约束生成、延展或闭环。不要在只有模糊氛围且允许自由结局时过度使用。 English signals: start/end frame, keyframe video, loop, extend video, must end at, interpolate between frames.
-source_book: "《影视飓风 AI 实战课》 Tim"
-source_chapter: "1-2、4-1、4-5、5-5"
-tags: [video, keyframe, endpoint, temporal-control]
-related_skills:
-  - slug: reference-anchor-density
-    relation: composes-with
-  - slug: storyboard-event-budgeting
-    relation: composes-with
-  - slug: sequence-continuity-assembly
-    relation: composes-with
+  当用户明确知道视频开头、结尾、循环落点或关键状态，想让 AI 补中间过程、延长片段，或抱怨“结尾没停在我要的位置”时使用。先决定哪些时间端点必须锁定，再以首帧/尾帧约束生成、延展或闭环。不要在只有模糊氛围且允许自由结局时过度使用。 完整 5–30 秒视频项目请优先使用 build-ai-video-fast；单点任务仍使用本 Skill。 English signals: start/end frame, keyframe video, loop, extend video, must end at, interpolate between frames.
 ---
 
 # 端点锚定的视频合成
@@ -84,8 +74,12 @@ related_skills:
 
 - composes-with: `reference-anchor-density`、`storyboard-event-budgeting`、`sequence-continuity-assembly`
 
+
+
+- 项目总编排：若用户需要从创意或素材完成完整 5–30 秒视频制作包，优先使用 `build-ai-video-fast`。
+
 ## 审计信息
 
 - **验证通过**：V1 ✓ / V2 ✓ / V3 ✓
-- **测试通过率**：待阶段 4 盲测
+- **测试记录**：构建时 6/6 通过；详见 test-results.md
 - **蒸馏时间**：2026-07-27
