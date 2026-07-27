@@ -1,17 +1,7 @@
 ---
 name: video-direction-specification
 description: |
-  当用户要把一个视频画面、情绪或故事念头写成可生成的动态提示词，或说“不要像静帧”“想让镜头更孤独/更紧张”“如何描述动作、运镜和切镜”时使用。按主体、可见动作、效果、节奏及镜头把抽象意图转为动态规格。不要用于静态图片的四维提示词，或决定素材输入模式。 English signals: video prompt, camera movement prompt, make it feel lonely, avoid static shot, describe motion and pacing.
-source_book: "《影视飓风 AI 实战课》 Tim"
-source_chapter: "2-2、5-6"
-tags: [video-prompt, direction, camera, pacing]
-related_skills:
-  - slug: storyboard-event-budgeting
-    relation: composes-with
-  - slug: endpoint-anchored-video-synthesis
-    relation: composes-with
-  - slug: sequence-continuity-assembly
-    relation: composes-with
+  当用户要把一个视频画面、情绪或故事念头写成可生成的动态提示词，或说“不要像静帧”“想让镜头更孤独/更紧张”“如何描述动作、运镜和切镜”时使用。按主体、可见动作、效果、节奏及镜头把抽象意图转为动态规格。不要用于静态图片的四维提示词，或决定素材输入模式。 完整 5–30 秒视频项目请优先使用 build-ai-video-fast；单点任务仍使用本 Skill。 English signals: video prompt, camera movement prompt, make it feel lonely, avoid static shot, describe motion and pacing.
 ---
 
 # 动态画面导演式规格
@@ -84,8 +74,12 @@ related_skills:
 
 - composes-with: `storyboard-event-budgeting`、`endpoint-anchored-video-synthesis`、`sequence-continuity-assembly`
 
+
+
+- 项目总编排：若用户需要从创意或素材完成完整 5–30 秒视频制作包，优先使用 `build-ai-video-fast`。
+
 ## 审计信息
 
 - **验证通过**：V1 ✓ / V2 ✓ / V3 ✓
-- **测试通过率**：待阶段 4 盲测
+- **测试记录**：构建时 6/6 通过；详见 test-results.md
 - **蒸馏时间**：2026-07-27

@@ -1,13 +1,7 @@
 ---
 name: reference-image-prompt-reverse-engineering
 description: |
-  当用户给出一张参考图，想分析其提示词、保留某些视觉特征、复现相近氛围，或说“反推提示词”“分析这张图怎么做出来的”“根据参考图写 prompt”时使用。把可见证据与不确定推断分开，以时间、主体、场景、风格拆解并生成后比对。不要承诺一键复刻原图；从零写提示词用 image-prompt-specification，纯自由风格发散用 constraint-aware-prompt-expansion。 English signals: reverse prompt, analyze reference image, derive prompt from image, match visual reference.
-source_book: "《影视飓风 AI 实战课｜2-1 图片提示词》 Tim"
-source_chapter: "00:08:15–00:13:53"
-tags: [reference-image, reverse-prompt, visual-analysis]
-related_skills:
-  - slug: image-prompt-specification
-    relation: composes-with
+  当用户给出一张参考图，想分析其提示词、保留某些视觉特征、复现相近氛围，或说“反推提示词”“分析这张图怎么做出来的”“根据参考图写 prompt”时使用。把可见证据与不确定推断分开，以时间、主体、场景、风格拆解并生成后比对。不要承诺一键复刻原图；从零写提示词用 image-prompt-specification，纯自由风格发散用 constraint-aware-prompt-expansion。 完整 5–30 秒视频项目请优先使用 build-ai-video-fast；单点任务仍使用本 Skill。 English signals: reverse prompt, analyze reference image, derive prompt from image, match visual reference.
 ---
 
 # 参照图的证据化反推
@@ -107,8 +101,12 @@ related_skills:
 
 - composes-with: `image-prompt-specification` — 先反推证据，再检查四维是否完整且与任务匹配。
 
+
+
+- 项目总编排：若用户需要从创意或素材完成完整 5–30 秒视频制作包，优先使用 `build-ai-video-fast`。
+
 ## 审计信息
 
 - **验证通过**：V1 ✓ / V2 ✓ / V3 ✓
-- **测试通过率**：待阶段 4 盲测
+- **测试记录**：构建时 6/6 通过；详见 test-results.md
 - **蒸馏时间**：2026-07-27

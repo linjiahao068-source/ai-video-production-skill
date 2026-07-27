@@ -1,17 +1,7 @@
 ---
 name: storyboard-event-budgeting
 description: |
-  当用户要把广告、故事或产品创意做成完整短片，纠结该用文字分镜还是图像分镜、镜头数和时长怎么定，或发现“十秒里塞不下这些事”时使用。先从脚本到分镜分层，再按事件负载和保真风险分配镜头、时长与生成方式。不要用于单一镜头的运镜措辞或已有明确首尾帧的过程补全。 English signals: storyboard, shot list, how many shots, duration budget, text storyboard vs image storyboard.
-source_book: "《影视飓风 AI 实战课》 Tim"
-source_chapter: "1-2、2-2、5-4、5-5"
-tags: [storyboard, narrative, duration, planning]
-related_skills:
-  - slug: video-direction-specification
-    relation: depends-on
-  - slug: endpoint-anchored-video-synthesis
-    relation: composes-with
-  - slug: sequence-continuity-assembly
-    relation: composes-with
+  当用户要把广告、故事或产品创意做成完整短片，纠结该用文字分镜还是图像分镜、镜头数和时长怎么定，或发现“十秒里塞不下这些事”时使用。先从脚本到分镜分层，再按事件负载和保真风险分配镜头、时长与生成方式。不要用于单一镜头的运镜措辞或已有明确首尾帧的过程补全。 完整 5–30 秒视频项目请优先使用 build-ai-video-fast；单点任务仍使用本 Skill。 English signals: storyboard, shot list, how many shots, duration budget, text storyboard vs image storyboard.
 ---
 
 # 分镜保真度与事件预算
@@ -85,8 +75,12 @@ related_skills:
 - depends-on: `video-direction-specification`
 - composes-with: `endpoint-anchored-video-synthesis`、`sequence-continuity-assembly`
 
+
+
+- 项目总编排：若用户需要从创意或素材完成完整 5–30 秒视频制作包，优先使用 `build-ai-video-fast`。
+
 ## 审计信息
 
 - **验证通过**：V1 ✓ / V2 ✓ / V3 ✓
-- **测试通过率**：待阶段 4 盲测
+- **测试记录**：构建时 6/6 通过；详见 test-results.md
 - **蒸馏时间**：2026-07-27

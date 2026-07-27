@@ -1,15 +1,7 @@
 ---
 name: image-prompt-specification
 description: |
-  当用户要把模糊的图片想法、分镜或产品视觉变成可控提示词，或说“帮我写/优化提示词”“结果总跑偏”“不知道还要补什么”时使用。按时间、主体、场景、风格诊断缺失信息，并按任务删除无关字段；适用于文字生图的意图规格化。不要用于只想复刻一张参考图（用 reference-image-prompt-reverse-engineering），也不要在明确要求自由脑暴时过度约束（用 constraint-aware-prompt-expansion）。 English signals: prompt refinement, image prompt, inconsistent generations, specify visual intent.
-source_book: "《影视飓风 AI 实战课｜2-1 图片提示词》 Tim"
-source_chapter: "00:01:39–00:11:38"
-tags: [image-prompt, visual-specification, controllability]
-related_skills:
-  - slug: reference-image-prompt-reverse-engineering
-    relation: composes-with
-  - slug: constraint-aware-prompt-expansion
-    relation: composes-with
+  当用户要把模糊的图片想法、分镜或产品视觉变成可控提示词，或说“帮我写/优化提示词”“结果总跑偏”“不知道还要补什么”时使用。按时间、主体、场景、风格诊断缺失信息，并按任务删除无关字段；适用于文字生图的意图规格化。不要用于只想复刻一张参考图（用 reference-image-prompt-reverse-engineering），也不要在明确要求自由脑暴时过度约束（用 constraint-aware-prompt-expansion）。 完整 5–30 秒视频项目请优先使用 build-ai-video-fast；单点任务仍使用本 Skill。 English signals: prompt refinement, image prompt, inconsistent generations, specify visual intent.
 ---
 
 # 四维意图与按需补细节
@@ -114,8 +106,12 @@ related_skills:
 - composes-with: `reference-image-prompt-reverse-engineering` — 反推得到的字段需用本技能检查完整性与优先级。
 - composes-with: `constraint-aware-prompt-expansion` — 本技能先定义约束，后者决定扩写的自由度。
 
+
+
+- 项目总编排：若用户需要从创意或素材完成完整 5–30 秒视频制作包，优先使用 `build-ai-video-fast`。
+
 ## 审计信息
 
 - **验证通过**：V1 ✓ / V2 ✓ / V3 ✓
-- **测试通过率**：待阶段 4 盲测
+- **测试记录**：构建时 6/6 通过；详见 test-results.md
 - **蒸馏时间**：2026-07-27

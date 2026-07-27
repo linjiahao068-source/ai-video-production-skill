@@ -1,15 +1,7 @@
 ---
 name: capability-cost-fit
 description: |
-  当用户要为图片/视频生成选择模型、清晰度、速度或预算，比较“轻量模型够不够”“何时升级 Pro/高质量”，或希望先低成本发散再精修时使用。先按交付物的主要失败风险匹配能力，再在质量、速度、成本之间选最小足够档位。不要用于选择图片/视频参考模态，或把预算问题简化为只选最贵模型。 English signals: choose model, model capability, quality speed cost tradeoff, cheap exploration then refine.
-source_book: "《影视飓风 AI 实战课》 Tim"
-source_chapter: "1-1、3-1、5-1"
-tags: [model-selection, cost, quality]
-related_skills:
-  - slug: generation-mode-reference-selection
-    relation: composes-with
-  - slug: storyboard-event-budgeting
-    relation: composes-with
+  当用户要为图片/视频生成选择模型、清晰度、速度或预算，比较“轻量模型够不够”“何时升级 Pro/高质量”，或希望先低成本发散再精修时使用。先按交付物的主要失败风险匹配能力，再在质量、速度、成本之间选最小足够档位。不要用于选择图片/视频参考模态，或把预算问题简化为只选最贵模型。 完整 5–30 秒视频项目请优先使用 build-ai-video-fast；单点任务仍使用本 Skill。 English signals: choose model, model capability, quality speed cost tradeoff, cheap exploration then refine.
 ---
 
 # 能力—成本适配
@@ -82,8 +74,12 @@ related_skills:
 
 - composes-with: `generation-mode-reference-selection`、`storyboard-event-budgeting`
 
+
+
+- 项目总编排：若用户需要从创意或素材完成完整 5–30 秒视频制作包，优先使用 `build-ai-video-fast`。
+
 ## 审计信息
 
 - **验证通过**：V1 ✓ / V2 ✓ / V3 ✓
-- **测试通过率**：待阶段 4 盲测
+- **测试记录**：构建时 6/6 通过；详见 test-results.md
 - **蒸馏时间**：2026-07-27

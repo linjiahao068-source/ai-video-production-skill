@@ -1,17 +1,7 @@
 ---
 name: sequence-continuity-assembly
 description: |
-  当用户要拼接多段 AI 视频、做场景转场、循环、换装/产品节奏片，或反馈“转场卡顿、动作断了、音乐和画面不合拍”时使用。先选动作锚点、空镜接缝或节拍时间轴，再检查重复帧并统一装配。不要把它用于单个镜头的提示词或从零故事分镜。 English signals: transition, match cut, action continuity, loop, duplicate frames, cut to beat, sequence pacing.
-source_book: "《影视飓风 AI 实战课》 Tim"
-source_chapter: "2-2、4-4、4-5、5-6"
-tags: [editing, transition, rhythm, continuity]
-related_skills:
-  - slug: video-direction-specification
-    relation: composes-with
-  - slug: endpoint-anchored-video-synthesis
-    relation: composes-with
-  - slug: storyboard-event-budgeting
-    relation: depends-on
+  当用户要拼接多段 AI 视频、做场景转场、循环、换装/产品节奏片，或反馈“转场卡顿、动作断了、音乐和画面不合拍”时使用。先选动作锚点、空镜接缝或节拍时间轴，再检查重复帧并统一装配。不要把它用于单个镜头的提示词或从零故事分镜。 完整 5–30 秒视频项目请优先使用 build-ai-video-fast；单点任务仍使用本 Skill。 English signals: transition, match cut, action continuity, loop, duplicate frames, cut to beat, sequence pacing.
 ---
 
 # 序列连续性与节拍装配
@@ -85,8 +75,12 @@ related_skills:
 - depends-on: `storyboard-event-budgeting`
 - composes-with: `video-direction-specification`、`endpoint-anchored-video-synthesis`
 
+
+
+- 项目总编排：若用户需要从创意或素材完成完整 5–30 秒视频制作包，优先使用 `build-ai-video-fast`。
+
 ## 审计信息
 
 - **验证通过**：V1 ✓ / V2 ✓ / V3 ✓
-- **测试通过率**：待阶段 4 盲测
+- **测试记录**：构建时 6/6 通过；详见 test-results.md
 - **蒸馏时间**：2026-07-27

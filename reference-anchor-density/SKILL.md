@@ -1,17 +1,7 @@
 ---
 name: reference-anchor-density
 description: |
-  当用户需要角色、产品或复杂场景跨镜头保持身份、细节、角度或运动一致，或反馈“单张参考会崩”“人物每次长得不一样”时使用。按保真风险决定需要多少多视图、端帧和细节锚点，再让生成补未知区。不要在容错高的灵感探索中无谓堆砌参考，也不要把它当作局部编辑的变更清单。 English signals: character consistency, multi-view reference, reference density, keep identity across shots, single image breaks details.
-source_book: "《影视飓风 AI 实战课》 Tim"
-source_chapter: "1-1、1-2、2-2、4-1、4-3"
-tags: [reference, consistency, fidelity]
-related_skills:
-  - slug: generation-mode-reference-selection
-    relation: depends-on
-  - slug: endpoint-anchored-video-synthesis
-    relation: composes-with
-  - slug: preserve-change-edit-contract
-    relation: composes-with
+  当用户需要角色、产品或复杂场景跨镜头保持身份、细节、角度或运动一致，或反馈“单张参考会崩”“人物每次长得不一样”时使用。按保真风险决定需要多少多视图、端帧和细节锚点，再让生成补未知区。不要在容错高的灵感探索中无谓堆砌参考，也不要把它当作局部编辑的变更清单。 完整 5–30 秒视频项目请优先使用 build-ai-video-fast；单点任务仍使用本 Skill。 English signals: character consistency, multi-view reference, reference density, keep identity across shots, single image breaks details.
 ---
 
 # 参考锚点密度与身份稳定
@@ -85,8 +75,12 @@ related_skills:
 - depends-on: `generation-mode-reference-selection`
 - composes-with: `endpoint-anchored-video-synthesis`、`preserve-change-edit-contract`
 
+
+
+- 项目总编排：若用户需要从创意或素材完成完整 5–30 秒视频制作包，优先使用 `build-ai-video-fast`。
+
 ## 审计信息
 
 - **验证通过**：V1 ✓ / V2 ✓ / V3 ✓
-- **测试通过率**：待阶段 4 盲测
+- **测试记录**：构建时 6/6 通过；详见 test-results.md
 - **蒸馏时间**：2026-07-27

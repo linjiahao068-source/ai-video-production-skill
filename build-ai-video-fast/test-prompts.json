@@ -1,0 +1,19 @@
+{
+  "skill": "build-ai-video-fast",
+  "version": "0.2.0",
+  "test_cases": [
+    {"id":"route-text-01","type":"should_trigger","prompt":"做一支 15 秒竖屏耳机广告：下雨夜路上戴上耳机后城市噪声消失，最后出现产品特写。没有任何素材。","expected_behavior":"一次补齐缺失信息后，选择文字→视觉锚点主路线，给出时长闭合的 Build Pack。"},
+    {"id":"route-reference-image-02","type":"should_trigger","prompt":"用我提供的同一位女性角色正侧背三张参考图，做 20 秒连续剧情短片。她的脸、红色风衣和雨夜场景必须跨镜头一致。","expected_behavior":"选择参考图→一致性主路线，列出身份锚点、镜头预算和连续性验收。"},
+    {"id":"route-video-03","type":"should_trigger","prompt":"我有一段演员奔跑和手持跟拍的视频，要把街道换成火星基地，但动作、表演节奏和运镜必须保留，做 12 秒短片。","expected_behavior":"选择视频参考/视频编辑主路线，视频承担动作与运镜，并写保留/变更合同。"},
+    {"id":"route-endpoint-04","type":"should_trigger","prompt":"做 3 秒循环：一朵花从花苞完全绽放后无缝回到花苞。首尾状态绝不能错。","expected_behavior":"说明低于 5 秒超出 v0.2.0 范围，提出可行压缩/拆分方案；若继续规划，首尾帧路线为主路线。"},
+    {"id":"negative-image-05","type":"should_not_trigger","prompt":"只帮我把这句静态海报提示词写得更准确：一只橙色猫在窗边。","expected_behavior":"不启动完整制作包，转交 image-prompt-specification。"},
+    {"id":"negative-reverse-06","type":"should_not_trigger","prompt":"分析这张参考图的光线和构图，并给我相近的静态图片提示词。","expected_behavior":"不启动完整制作包，转交 reference-image-prompt-reverse-engineering。"},
+    {"id":"negative-edit-07","type":"should_not_trigger","prompt":"只把这张产品图里的瓶子改成蓝色，标签、构图和背景绝对不变。","expected_behavior":"不启动完整制作包，转交 preserve-change-edit-contract。"},
+    {"id":"negative-cost-08","type":"should_not_trigger","prompt":"已经选好图生视频，怎样在低预算和高质量之间选生成档位？","expected_behavior":"不启动完整制作包，转交 capability-cost-fit。"},
+    {"id":"mixed-09","type":"edge_case","prompt":"我有产品多角度图和一段参考视频，视频的手部动作要保留；做 20 秒横屏功能广告。","expected_behavior":"主路线优先选择视频参考/视频编辑，产品图作为身份/外观辅助锚点，而不是并行路线。"},
+    {"id":"missing-10","type":"edge_case","prompt":"给我的咖啡品牌做个短视频。","expected_behavior":"最多在一次消息内提出未提供的五问；不能在缺失信息下伪造素材、授权或 CTA。"},
+    {"id":"range-11","type":"edge_case","prompt":"我要一支 45 秒的品牌剧情广告，包含人物和产品故事。","expected_behavior":"标记超出 5–30 秒范围，提出拆成两个或更多 Build Pack 的方案，不静默缩为 30 秒。"},
+    {"id":"sound-12","type":"edge_case","prompt":"做一支 30 秒竖屏新品片，有中文旁白、逐句字幕、音乐和两处音效，只有产品图和文案。","expected_behavior":"选择参考图→一致性主路线，给出声音/字幕时间线、单行优先字幕和发布前检查。"}
+  ],
+  "minimum_pass_rate": 1.0
+}
